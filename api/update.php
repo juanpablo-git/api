@@ -1,14 +1,18 @@
 <?php
 require "conect.php";
-$put = $_POST['nome'];
+
+$nome = $_POST['nome'];
 $id =$_POST['id'];
 $setor = $_POST['setor'];
-
-$pdo->query("update funcionario set nome ='$put' setor = '$setor' where id=$id ");
-
-if($put != ""){
-    echo $put;
-
+if($setor ==="financeiro"){
+    $idSetor = 1;
+}elseif($setor ==="ti"){
+    $idSetor = 2;
+}elseif($setor ==="cozinha"){
+    $idSetor=3;
 }
 
+$pdo->query("update `funcionario` set `nome`='$nome',`setor`=$idSetor where `id` = $id ");
+
+echo "O usuário $nome acabou de ser atualizaddo" ;
 
