@@ -2,7 +2,7 @@
 
  ?>
 <html>
-    <form action="http://localhost/pdo/post.php" method="post">
+    <form action="http://localhost/api/api/post.php" method="post">
     <input type="text" name="nome">
     <select name="setor">
         <option name="setor" value="1">financeiro</option>
